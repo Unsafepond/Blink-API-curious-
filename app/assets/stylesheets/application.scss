@@ -1,1 +1,15 @@
 @import "materialize";
+@import url(https://fonts.googleapis.com/css?family=Exo+2:400,900|Shadows+Into+Light);
+@import "welcome";
+
+.shadows {
+  font-family: 'Shadows Into Light', cursive;
+}
+
+.exo {
+  font-family: 'Exo 2', sans-serif;
+}
+
+.small-left-margin {
+  margin-left: 20px;
+}
