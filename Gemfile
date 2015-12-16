@@ -12,6 +12,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem "materialize-sass"
 gem "figaro"
 gem 'omniauth-oauth2', '~> 1.1'
+gem "kappa"
 
 group :development, :test do
   gem 'byebug'
