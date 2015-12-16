@@ -1,3 +1,18 @@
-<div class="container">
-  
+<div class="container small-top-margin">
+  <div class="row">
+    <% @streams.each do |stream| %>
+      <div class="col s4 m4">
+        <div class="card">
+          <div class="card-image">
+            <img src="<%= stream.preview_url %>">
+          </div>
+          <div class="card-content">
+            <span class="card-title"><%= parse_name(stream.name) %></span>
+            <h6><i class="small material-icons med-left-margin">perm_identity</i><%= stream.viewer_count%></h6>
+            <p><i class="small material-icons med-left-margin">play_arrow</i><%= stream.game_name %></p>
+          </div>
+        </div>
+      </div>
+    <% end%>
+  </div>
 </div>
