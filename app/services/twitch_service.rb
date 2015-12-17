@@ -5,7 +5,11 @@ class TwitchService
   end
 
   def self.current_stream(params)
-    @current_stream ||= Twitch.streams.get(params[:stream_name])
+    Twitch.streams.get(params)
+  end
+
+  def self.current_channel(params)
+    Twitch.channels.get(params)
   end
 
 end

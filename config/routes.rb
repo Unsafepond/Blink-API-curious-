@@ -9,4 +9,6 @@ Rails.application.routes.draw do
 
   resources :stream, param: :stream_name, only: [:show]
   resources :user, param: :username, only: [:show]
+  resources :channels, param: :channel_name, only: [:show]
+  
 end

@@ -1,0 +1,20 @@
+<div class="container">
+  <h1 class="profile-header exo"><%= image_tag(@channel.logo_url)%><%= @channel.display_name %></h1>
+  <% if @channel.streaming? %>
+    <h4><%= link_to "Live now!", stream_path(stream_name: @channel.display_name)%></h4>
+  <% end %>
+
+  <h3 class="large-top-margin">Videos:</h3>
+  <div class="row">
+    <% @videos.each do |video| %>
+      <div class="col s4 m4">
+        <div class="card">
+          <div class="card-image">
+            <%= link_to image_tag(video.preview_url), video.url %>
+          </div>
+          <span class="card-title"><%= video.title %></span>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
