@@ -1,10 +1,16 @@
-<div class="container small-top-margin">
-  <iframe 
-      src="http://player.twitch.tv/?channel=<%= @stream_name %>" 
-      height="720" 
-      width="1280" 
-      frameborder="0" 
+<div class="med-left-margin small-top-margin"></div>
+<iframe 
+    src="http://player.twitch.tv/?channel=<%= @stream_name %>" 
+    height="720" 
+    width="1280" 
+    frameborder="0" 
+    scrolling="no" 
+    allowfullscreen>
+</iframe>
+<iframe frameborder="0" 
       scrolling="no" 
-      allowfullscreen>
-  </iframe>
-</div>
+      id="chat_embed" 
+      src="http://www.twitch.tv/<%= @stream_name %>/chat" 
+      height="720" 
+      width="325">
+</iframe>
