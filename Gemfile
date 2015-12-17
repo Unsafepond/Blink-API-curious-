@@ -16,6 +16,9 @@ gem "kappa"
 
 group :development, :test do
   gem 'byebug'
+  gem "capybara"
+  gem "simplecov"
+  gem 'minitest-reporters'
 end
 
 group :development do
