@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   get "/logout", to: "sessions#destroy", as: "logout"
 
   resources :stream, param: :stream_name, only: [:show]
+  resources :user, param: :username, only: [:show]
 end
