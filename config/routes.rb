@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   get "/auth/twitch/callback", to: "sessions#create"
 
   get "/logout", to: "sessions#destroy", as: "logout"
+
+  resources :stream, param: :stream_name, only: [:show]
 end
